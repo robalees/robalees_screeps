@@ -1,0 +1,20 @@
+# Node.js modules
+node_modules/
+
+# Compiled output
+dist/
+
+# Screeps configuration file
+screeps.json
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# macOS-specific files
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
