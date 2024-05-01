@@ -3,7 +3,7 @@
 /**
  * @param {Creep} creep
  */
-const roleHarvester = {
+export const roleHarvester = {
   run: function (creep) {
     if (creep.store.getFreeCapacity() > 0) {
       const sources = creep.room.find(FIND_SOURCES);

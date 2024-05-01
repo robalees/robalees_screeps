@@ -1,8 +1,8 @@
 /// <reference path="./types.d.ts" />
 
 import * as _ from "lodash";
-const roleHarvester = require("./role.harvester");
-const roleUpgrader = require("./role.upgrader");
+import { roleHarvester } from "./role.harvester";
+import { roleUpgrader } from "./role.upgrader";
 
 module.exports.loop = function () {
   console.log(`CPU limit: ${Game.cpu.limit}`);
