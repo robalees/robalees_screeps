@@ -1,3 +1,8 @@
+/// <reference path="./types.d.ts" />
+
+/**
+ * @param {Creep} creep
+ */
 const roleHarvester = {
   run: function (creep) {
     if (creep.store.getFreeCapacity() > 0) {

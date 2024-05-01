@@ -1,3 +1,8 @@
+/// <reference path="./types.d.ts" />
+
+/**
+ * @param {Creep} creep
+ */
 const roleUpgrader = {
   run: function (creep) {
     if (creep.memory.upgrading && creep.store[RESOURCE_ENERGY] === 0) {

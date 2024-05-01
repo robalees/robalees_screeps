@@ -1,3 +1,6 @@
+/// <reference path="./types.d.ts" />
+
+import * as _ from "lodash";
 const roleHarvester = require("./role.harvester");
 const roleUpgrader = require("./role.upgrader");
 
@@ -7,6 +10,10 @@ module.exports.loop = function () {
   // Check if harvester creeps exist, if not, spawn them
   const harvesters = _.filter(
     Game.creeps,
+    /**
+     * @param {Creep} creep
+     * @returns {boolean}
+     */
     (creep) => creep.memory.role === "harvester"
   );
   const sources = Game.spawns["Spawn1"].room.find(FIND_SOURCES);
@@ -15,6 +22,10 @@ module.exports.loop = function () {
     const source = sources[i];
     const sourceHarvesters = _.filter(
       harvesters,
+      /**
+       * @param {Creep} creep
+       * @returns {boolean}
+       */
       (creep) => creep.memory.sourceIndex === i
     );
 
@@ -30,6 +41,10 @@ module.exports.loop = function () {
   // Spawn an upgrader if there are none
   const upgraders = _.filter(
     Game.creeps,
+    /**
+     * @param {Creep} creep
+     * @returns {boolean}
+     */
     (creep) => creep.memory.role === "upgrader"
   );
   if (upgraders.length === 0) {
