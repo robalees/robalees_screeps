@@ -1,9 +1,7 @@
-/// <reference path="./types.d.ts" />
-
 /**
  * @param {Creep} creep
  */
-export const roleHarvester = {
+const roleHarvester = {
   run: function (creep) {
     if (creep.store.getFreeCapacity() > 0) {
       const sources = creep.room.find(FIND_SOURCES);
